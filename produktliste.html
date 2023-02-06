@@ -20,16 +20,21 @@
       </nav>
     </header>
     <main>
-      <h1>NIKE</h1>
+      <h1 class="category">NIKE</h1>
       <div class="productlist">
-        <article class="produkt">
-          <img src="images/1163.webp" alt="1163" class="produkt-img" />
-          <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
-          <p class="subtle">Tshirts | Nike</p>
-          <p class="prize">DKK 1595,-</p>
-          <a href="produkt.html" class="link">READ MORE</a>
-        </article>
-        <article class="produkt onSale">
+        <template id="produktTemplate">
+          <article class="produkt">
+            <img src="images/1163.webp" alt="1163" class="produkt-img" />
+            <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
+            <p class="subtle">
+              <span class="type"> Tshirts </span> |
+              <span class="brand">Nike</span>
+            </p>
+            <p class="price">DKK 1595,-</p>
+            <a href="produkt.html" class="link">READ MORE</a>
+          </article>
+        </template>
+        <!-- <article class="produkt onSale">
           <img src="images/1163.webp" alt="1163" class="produkt-img" />
           <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
           <p class="subtle">Tshirts | Nike</p>
@@ -57,8 +62,9 @@
             <p class="sale">-34%</p>
           </div>
           <a href="produkt.html" class="link">READ MORE</a>
-        </article>
+        </article> -->
       </div>
     </main>
+    <script src="js/produktliste.js"></script>
   </body>
 </html>
