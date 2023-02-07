@@ -3,11 +3,17 @@
 
 console.log("produkt.js");
 
+//lav url search objekt
+const urlParams = new URLSearchParams(window.location.search);
+
+//find id
+const id = urlParams.get("id");
+const url = `https://kea-alt-del.dk/t7/api/products/${id}`;
+
 async function getProdukt() {
-  const response = await fetch("https://kea-alt-del.dk/t7/api/products/1529");
-  const data = await response.json();
-  console.log(data);
-  showProdukt(data);
+  fetch(url)
+    .then((res) => res.json())
+    .then(showProdukt);
 }
 
 function showProdukt(produkt) {

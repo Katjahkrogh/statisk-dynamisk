@@ -23,20 +23,22 @@ function showProdukt(produkt) {
   // 5 clone
   const copy = template.cloneNode(true);
   // 6 skifte data
+  copy.querySelector("h3").textContent = produkt.productdisplayname;
+  document.querySelector(".category").textContent = produkt.category;
+  copy.querySelector(".brand").textContent = produkt.brandname;
+  copy.querySelector(".type").textContent = produkt.articletype;
+  copy.querySelector(".price").textContent = produkt.price;
+  copy.querySelector("a").href = "produkt.html?id=" + produkt.id;
+  copy.querySelector(
+    ".produkt-img"
+  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp`;
+
   //   if (produkt.soldout) {
   //     copy.querySelector("article").classlist.add("soldOut");
   //   }
   //   if (produkt.discount) {
   //     copy.querySelector("article").classlist.add("onSale");
   //   }
-  copy.querySelector("h3").textContent = produkt.productdisplayname;
-  document.querySelector(".category").textContent = produkt.category;
-  copy.querySelector(".brand").textContent = produkt.brandname;
-  copy.querySelector(".type").textContent = produkt.articletype;
-  copy.querySelector(".price").textContent = produkt.price;
-  copy.querySelector(
-    ".produkt-img"
-  ).src = `https://kea-alt-del.dk/t7/images/webp/640/${produkt.id}.webp`;
 
   // 7 appende
   document.querySelector(".productlist").appendChild(copy);

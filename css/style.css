@@ -106,6 +106,7 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(100px, 405px));
   gap: 2.5rem;
 }
+
 .productlist article {
   margin-bottom: 1rem;
 }
@@ -148,6 +149,7 @@ h3 {
   color: white;
   padding: 1rem;
   font-family: "Open Sans", sans-serif;
+  position: relative;
 }
 .productlist article.soldOut img {
   opacity: 0.3;
