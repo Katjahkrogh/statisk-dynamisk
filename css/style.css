@@ -132,10 +132,8 @@ h3 {
   color: black;
   font-family: "Open Sans", sans-serif;
 }
-.discounted {
-  display: flex;
-  justify-content: space-between;
-}
+
+
 .sale {
   background-color: yellow;
   padding: 2%;
@@ -149,7 +147,6 @@ h3 {
   color: white;
   padding: 1rem;
   font-family: "Open Sans", sans-serif;
-  position: relative;
 }
 .productlist article.soldOut img {
   opacity: 0.3;
@@ -246,3 +243,13 @@ option {
   min-height: 1.2em;
   padding: 0px 2px 1px;
 }
+
+.discounted{
+  display: none;
+}
+
+.onSale .discounted{
+  display: flex;
+  justify-content: space-between;
+}
+
